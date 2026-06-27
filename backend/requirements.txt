@@ -1,0 +1,42 @@
+# GlotSync AI — Backend Dependencies
+# Python 3.13 compatible — all packages have pre-built wheels for 3.13
+
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+gunicorn==23.0.0
+
+# ── Data Validation ───────────────────────────────────────────────────────────
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# ── File Uploads ──────────────────────────────────────────────────────────────
+python-multipart==0.0.17
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.36
+alembic==1.14.0
+asyncpg==0.30.0
+psycopg2-binary==2.9.10
+
+# ── Cloud Storage + Amazon Transcribe ────────────────────────────────────────
+# boto3 provides both the S3 client and the Amazon Transcribe client
+boto3==1.35.85
+
+# ── Authentication ────────────────────────────────────────────────────────────
+firebase-admin==6.6.0
+
+# ── Rate Limiting ─────────────────────────────────────────────────────────────
+slowapi==0.1.9
+
+# ── HTTP Client (fetching Transcribe result JSON from S3 pre-signed URL) ─────
+httpx==0.28.1
+
+# ── Environment ───────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Logging ───────────────────────────────────────────────────────────────────
+structlog==24.4.0
+
+# ── Error Tracking ────────────────────────────────────────────────────────────
+sentry-sdk[fastapi]==2.19.0
